@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Planets/Asteroids/Asteroid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asteroid/Asteroid.gd" type="Script" id=2]
+
+[node name="Asteroid" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Asteroid" parent="." instance=ExtResource( 1 )]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 7.97688, -2.86606 )
+scale = Vector2( 2.33244, 2.53571 )
+polygon = PoolVector2Array( 1.72486, -12.2782, 2.58233, -7.94015, 3.4398, -2.81338, 8.58463, -0.447186, 9.87084, 0.735913, 10.2996, 5.07394, 11.157, 6.25704, 12.0145, 8.62324, 13.7295, 10.2007, 13.7295, 11.7782, 11.157, 12.9613, 6.86969, 12.9613, 4.29727, 11.7782, 4.29727, 8.22887, 3.86854, 7.44014, 3.86854, 7.04577, -0.418823, 7.44014, -1.70503, 7.44014, -3.41998, 9.0176, -3.84871, 11.3838, -5.13492, 13.3556, -6.84986, 13.3556, -9.42228, 12.5669, -12.4234, 9.80634, -14.9958, 4.67958, -14.9958, 3.10211, -14.1384, 1.91901, -11.1372, -0.0528198, -10.7085, -6.75705, -9.42228, -8.33451, -6.84986, -8.33451, -5.56365, -7.94015, -4.70618, -8.33451, -3.41998, -11.4894, -2.13377, -13.0669, -0.418823, -13.8556, 1.29612, -13.0669 )

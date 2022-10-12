@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Planets/Asteroids/NoAtmosphere.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asteroid/Asteroid_small.gd" type="Script" id=2]
+
+[node name="Asteroid_small" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="NoAtmosphere" parent="." instance=ExtResource( 1 )]
+margin_left = -19.0
+margin_top = -27.0
+margin_right = 81.0
+margin_bottom = 73.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -1, 1 )
+scale = Vector2( 1.42851, 1.82133 )
+polygon = PoolVector2Array( 2.10008, -4.39239, -2.10008, -4.39239, -4.9002, -5.49048, -7.70031, -5.49048, -9.10037, -4.39239, -9.10037, -3.84334, -7.00028, -2.19619, -6.30025, -2.19619, -6.30025, -1.0981, -7.00028, -0.549048, -7.00028, 1.0981, -5.60023, 1.0981, -4.20017, 0.549048, -2.10008, 0.549048, 0, 1.0981, 4.20017, 1.64715, 6.30025, 1.0981, 7.70031, 0.549048, 9.10037, -0.549048, 8.40034, -1.0981, 8.40034, -2.19619, 9.10037, -2.74524, 9.10037, -4.94143, 7.00028, -4.94143, 4.9002, -6.03953, 4.20017, -6.03953, 3.50014, -4.94143 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2( -10, -11 )
+scale = Vector2( 1.42851, 1.82133 )
+polygon = PoolVector2Array( -0.700028, -2.74524, 0.700028, -2.74524, 1.40006, -2.19619, 2.10008, -1.64715, 0, -0.549049, -1.40006, -1.0981, -2.10009, -1.64715 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+position = Vector2( -2, 17 )
+scale = Vector2( 1.42851, 1.82133 )
+polygon = PoolVector2Array( -4.20017, -2.74524, -2.80011, -3.29429, -1.40006, -2.74524, 0.700028, -2.74524, 2.10008, -2.19619, 3.50014, -2.19619, 3.50014, -2.74524, 4.9002, -3.84334, 5.60023, -4.39238, 7.00028, -3.84334, 7.70031, -3.29429, 8.40034, -2.19619, 7.70031, -1.64714, 7.00028, 1.90735e-06, 6.30025, 0.54905, 4.9002, 0.54905, 2.80011, -1.09809, 2.10008, -1.09809, 0.700028, 1.90735e-06, -3.50014, -0.549047, -4.9002, -1.09809, -5.60023, -1.64714 )
